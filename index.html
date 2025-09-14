@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Ваше Имя] | Портфолио</title>
+    
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --card-color: #2c2c2c;
+            --primary-color: #00aaff;
+            --text-color: #e0e0e0;
+            --subtext-color: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: var(--card-color);
+            max-width: 400px;
+            width: 100%;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: scale(0.95);
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: var(--subtext-color);
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-color);
+            background-color: rgba(255, 255, 255, 0.05);
+            font-size: 1rem;
+            font-weight: 400;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .link-button i {
+            margin-right: 12px;
+            font-size: 1.2rem;
+            width: 20px; /* Для выравнивания иконок */
+        }
+        
+        .link-button:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.8rem;
+            color: var(--subtext-color);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Замените '...' на ссылку на ваше фото -->
+        <img src="https://via.placeholder.com/150" alt="Фото профиля" class="profile-picture">
+        
+        <h1 class="name">[Имя Фамилия]</h1>
+        
+        <p class="title">[Ваша Специальность]</p>
+        
+        <p class="bio">
+            [Здесь ваша краткая биография или девиз. Например: "Создаю цифровые продукты, которые любят пользователи."]
+        </p>
+        
+        <div class="links">
+            <!-- Замените # на ваши реальные ссылки -->
+            <a href="mailto:[ваша_почта@example.com]" class="link-button">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="#" target="_blank" class="link-button">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" target="_blank" class="link-button">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="#" target="_blank" class="link-button">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>[Ваше Имя] &copy; 2025</p>
+    </footer>
+
+</body>
+</html>
